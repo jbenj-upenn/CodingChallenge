@@ -27,6 +27,7 @@ public class InterviewRockPaperScissors {
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
+                sc.nextLine(); // Clear the input buffer
                 continue;
             }
             System.out.println("***************");
@@ -48,8 +49,8 @@ public class InterviewRockPaperScissors {
                 //the 'bound' is exclusive, so random output is 1-3
                 int computerInput = r.nextInt(3) + 1;
                 String[] result = paperRockScissors(userResponse, computerInput);
-                System.out.println(result[0].toString());
-                System.out.println(result[1].toString());
+                System.out.println(result[0]);
+                System.out.println(result[1]);
                 if (result[0].contains("Tie")) {
                     again = 1;
                     continue;
